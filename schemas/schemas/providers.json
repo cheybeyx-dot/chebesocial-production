@@ -1,0 +1,8 @@
+
+{
+  "id": "auto",
+  "name": "Example Provider",
+  "apiUrl": "https://provider.com/api/v2",
+  "apiKey": "encrypted_key",
+  "active": true
+}
