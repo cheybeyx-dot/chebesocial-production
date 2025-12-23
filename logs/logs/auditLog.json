@@ -1,7 +1,0 @@
-
-{
-  "actorId": "adminId",
-  "action": "REFUND_ORDER",
-  "targetId": "orderId",
-  "timestamp": "time"
-}
