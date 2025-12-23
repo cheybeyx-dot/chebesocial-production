@@ -1,0 +1,8 @@
+
+{
+  "id": "auto",
+  "title": "Maintenance Notice",
+  "content": "We will be offline for 1 hour",
+  "active": true,
+  "createdAt": "timestamp"
+}

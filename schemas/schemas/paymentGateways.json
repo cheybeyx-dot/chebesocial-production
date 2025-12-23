@@ -1,0 +1,10 @@
+
+{
+  "id": "auto",
+  "name": "Paystack",
+  "publicKey": "pk_xxx",
+  "secretKey": "sk_xxx",
+  "webhookSecret": "wh_xxx",
+  "active": true,
+  "supportedCurrencies": ["USD", "NGN"]
+}
