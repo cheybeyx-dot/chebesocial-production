@@ -46,13 +46,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <head>
         {/* Google Site Verification */}
         <meta
           name="google-site-verification"
           content="google3867fe0832cbaac2"
         />
+      </head>
 
+      <body>
         {/* Structured Data */}
         <Script
           id="chebe-organization-schema"
@@ -71,7 +73,7 @@ export default function RootLayout({
           }}
         />
 
-        {/* Payment Script (safe to keep for later) */}
+        {/* Payment scripts can stay – they will NOT break deploy */}
         <Script
           src="https://korapay.com/inline-checkout.js"
           strategy="afterInteractive"
