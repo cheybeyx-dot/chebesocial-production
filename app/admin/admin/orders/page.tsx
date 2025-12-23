@@ -30,31 +30,33 @@ export default function AdminOrdersPage() {
       setOrders((data as Order[]) || []);
       setLoading(false);
     };
-
     fetchOrders();
   }, [getCollection]);
 
   const filteredOrders =
     filter === "all" ? orders : orders.filter((o) => o.type === filter);
 
-  const updateStatus = async (id: string, status: "approved" | "rejected") => {
+  const updateStatus = async (
+    id: string,
+    status: "approved" | "rejected"
+  ) => {
     await updateDocument("classic-admin-payment", id, {
       status,
       approved: status === "approved",
     });
 
-    setOrders((prev) => prev.map((o) => (o.id === id ? { ...o, status } : o)));
+    setOrders((prev) =>
+      prev.map((o) => (o.id === id ? { ...o, status } : o))
+    );
   };
 
-  if (loading) {
-    return <p className="p-6">Loading orders...</p>;
-  }
+  if (loading) return <p className="p-6">Loading orders...</p>;
 
   return (
     <div className="container mx-auto p-6 space-y-6">
       <h1 className="text-2xl font-semibold">📦 Orders</h1>
 
-      {/* Filters */}
+      {/* FILTERS */}
       <div className="flex gap-2 flex-wrap">
         {["all", "api", "buyOrganicService", "resolve", "buyAccount"].map(
           (t) => (
@@ -76,7 +78,7 @@ export default function AdminOrdersPage() {
       <div className="grid gap-4">
         {filteredOrders.map((order) => (
           <Card key={order.id} className="p-4 space-y-3">
-            <div className="flex justify-between items-start gap-4">
+            <div className="flex justify-between items-start">
               <div>
                 <p className="font-medium">
                   {order.service || "Account / Resolve"}
