@@ -1,0 +1,8 @@
+
+{
+  "id": "auto",
+  "userId": "uid",
+  "subject": "Order Issue",
+  "status": "open",
+  "createdAt": "timestamp"
+}
