@@ -1,9 +1,0 @@
-
-{
-  "name": "Global SMM Panel",
-  "short_name": "SMM Panel",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#000000"
-}
