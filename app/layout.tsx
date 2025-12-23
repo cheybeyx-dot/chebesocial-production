@@ -1,0 +1,87 @@
+import type { Metadata } from "next";
+import "./globals.css";
+import { ThemeProvider } from "@/components/theme/ThemeProvider";
+
+export const metadata: Metadata = {
+  title: {
+    default: "Chebe Social – Global Organic SMM Panel",
+    template: "%s | Chebe Social",
+  },
+  description:
+    "Chebe Social is a global organic SMM panel offering real social media engagement, monetized accounts, account management, ads solutions, music promotion, and digital growth services worldwide.",
+  applicationName: "Chebe Social",
+  authors: [{ name: "Chebe Social" }],
+  creator: "Chebe Social",
+  openGraph: {
+    title: "Chebe Social – Global Organic SMM Panel",
+    description:
+      "Grow organically on YouTube, Facebook, TikTok, Instagram, and more. Monetized accounts, ads management, music promotion, adult engagement services, and content mentorship worldwide.",
+    url: "https://www.chebesocial.com",
+    siteName: "Chebe Social",
+    images: [
+      {
+        url: "https://www.chebesocial.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Chebe Social – Global Organic SMM Panel",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Chebe Social – Global Organic SMM Panel",
+    description:
+      "Grow organically on YouTube, Facebook, TikTok, Instagram, and more. Monetized accounts, ads management, music promotion, adult engagement services, and content mentorship worldwide.",
+    images: ["https://www.chebesocial.com/og-image.png"],
+  },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="google3867fe0832cbaac2"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Chebe Social",
+              url: "https://www.chebesocial.com",
+              logo: "https://www.chebesocial.com/og-image.png",
+              sameAs: [],
+              description:
+                "Chebe Social is a global organic SMM panel offering social media growth, monetized accounts, ads solutions, music promotion, watch hours, and digital services worldwide.",
+            }),
+          }}
+        />
+      </head>
+      <body>import Script from "next/script";
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en">
+      <body>
+        <Script
+          src="https://korapay.com/inline-checkout.js"
+          strategy="afterInteractive"
+        />
+        {children}
+      </body>
+    </html>
+  );
+}
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
+    </html>
+  );
+}
