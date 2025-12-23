@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Disallow sensitive routes
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /api
+Disallow: /login
+Disallow: /register
+
+# Sitemap locations
+Sitemap: https://www.chebesocial.com/sitemap.xml
+Sitemap: https://chebesocial.com/sitemap.xml
